@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+:root {
+  --container: 1000px;
+  --black: #191919;
+  --black-opa: rgba(0, 0, 0, 0.6);
+  --orange: #f36025;
+  --dark-orange: #c0562a;
+  --blue: #4183d7;
+  --dar-blue: #305688;
+  --grey-text-input: #768696;
+  --grey-background-input: #f4f6f7;
+  --background: #f9f9f9;
+  min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* INFOS: 
+Une div en absolute l'est par rapport à son parent.
+Ensuite tu peux gérer plusieurs "couches" à l'aide de z-index /*
+
+/* COMMONS *****************/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  background-color: #fafafa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*:hover {
+  text-decoration: none !important;
+}
+
+*:focus {
+  outline: none;
+}
+
+li {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+Link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+button {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+
+input {
+  font-size: 16px;
+}
+
+.cursor {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.window {
+  min-height: calc(100vh - 80px);
+}
+
+.wrapper {
+  width: 1100px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+/* FOOTER ************************/
+
+footer {
+  bottom: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #474747;
+  color: white;
+  text-align: center;
+  height: 60px;
+  margin-top: 20px;
+  padding-top: 5px;
+  font-weight: 400;
+  width: 100%;
+}
+
+footer a {
+  color: rgb(8, 243, 243);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* COLORS ****************/
+
+.bg-dark {
+  background-color: #474747;
+  color: white;
+  text-align: center;
+  height: 80px;
+  margin-top: 30px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.is-blue {
+  color: #4183d7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grey {
+  color: var(--grey-text-input);
+}
+
+.blue {
+  color: var(--dar-blue);
+}
+
+/* BORDERS *****************/
+
+.border-top {
+  border-top: 1px solid #f9f9f9;
+}
+
+/* FONT ***********************/
+
+h1 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h2:hover {
+  color: #f56b2a;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #f56b2a;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+p {
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  text-align: left;
+}
+
+.lh30 {
+  line-height: 30px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.extra-bold {
+  font-weight: bolder;
+}
+
+/* FLEX-BOX *******************/
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.aligned {
+  display: flex;
+  align-items: center;
+}
+
+/* PADDING & MARGIN **********************/
+
+.padv15 {
+  padding: 15px 0;
+}
+
+.padt15 {
+  padding-top: 15px;
+}
+
+.padh60 {
+  padding: 0 60px;
+}
+
+.padtop {
+  padding: 15px 0;
+}
+
+li > div > div {
+  text-align: left;
+}
+
+.pad25 {
+  padding: 30px 25px 0 25px;
+}
+
+.padt200 {
+  padding-top: 200px;
+}
+
+.mtop {
+  margin-top: 15px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.pt100 {
+  padding-top: 100px;
 }

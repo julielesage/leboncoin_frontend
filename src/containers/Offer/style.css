@@ -1,0 +1,47 @@
+/* OFFER VISUAL *************/
+
+.square {
+  width: 700px;
+  height: 577px;
+  margin: 100px 0 25px 0;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.square-img {
+  width: 700px;
+  height: 393.56px;
+}
+
+.big-picture {
+  width: 700px;
+  height: 393.56px;
+  object-position: center;
+  object-fit: cover;
+}
+
+/* OFFER SELLER **************/
+
+.selling {
+  width: 279px;
+  height: 195px;
+  margin-top: 100px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  font-weight: bold;
+}
+
+.selling > div {
+  padding: 25px;
+}
+
+aside button {
+  color: white;
+  background-color: #f56b2a;
+  font-size: 18px;
+  text-align: center;
+  width: 230px;
+  height: 44px;
+  border-radius: 5px;
+}
