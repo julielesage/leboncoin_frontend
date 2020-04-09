@@ -3,13 +3,15 @@ import axios from "axios";
 import SearchBar from "../../components/SearchBar";
 import Card from "../../components/Card";
 import Pagination from "../../components/Pagination";
+import LogIn from "../../components/LogIn/LogIn.js";
 import "./style.css";
 
-const Offers = () => {
+const Offers = ({ onLogin, setShowModal, showModal }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [skip, setSkip] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
+
   const limit = 3;
 
   // 1rst EX PAGINATION (PREVIOUS/NEXT BUTTON see Pagination components) :
@@ -69,6 +71,13 @@ const Offers = () => {
           paginate={paginate}
         />
       </div>
+      {showModal === true ? (
+        <div className="modal">
+          <div className="centered aligned">
+            <LogIn onLogin={onLogin} setShowModal={setShowModal} />
+          </div>
+        </div>
+      ) : null}
     </>
   );
 };

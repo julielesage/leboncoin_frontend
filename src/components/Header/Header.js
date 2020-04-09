@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import "./style.css";
 
-const Header = ({ username, token, setToken }) => {
+const Header = ({ username, token, setToken, setShowModal }) => {
   const history = useHistory();
   const [searchFocus, setSearchFocus] = useState(false);
 
@@ -57,11 +57,17 @@ const Header = ({ username, token, setToken }) => {
           </ul>
           {/* toujours repeter sa condition avec && et || */}
           {!token ? (
-            <Link to="/log_in" className="log underline">
+            <div
+              onClick={(e) => {
+                e.preventDefault();
+                setShowModal(true);
+              }}
+              className="log underline"
+            >
               {/* ici avec "far" on peut ajouter un style a l icone */}
               <FontAwesomeIcon className="user" icon={["far", "user"]} />
               Se connecter
-            </Link>
+            </div>
           ) : (
             <div
               className="log underline"

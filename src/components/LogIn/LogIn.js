@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LogIn = ({ onLogin }) => {
+const LogIn = ({ onLogin, setShowModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
 
   /* SOUMETTRE ************************/
 
@@ -29,7 +29,7 @@ const LogIn = ({ onLogin }) => {
         onLogin(token, username);
 
         // back to offers
-        history.push("/");
+        setShowModal(false);
       } else {
         alert("token or username is missing");
       }
@@ -47,6 +47,18 @@ const LogIn = ({ onLogin }) => {
           submit();
         }}
       >
+        <div className="end exit">
+          {/* switch modal hidden/not hidden */}
+          <FontAwesomeIcon
+            icon={["far", "times-circle"]}
+            size="2x"
+            className="red cursor"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowModal(false);
+            }}
+          />
+        </div>
         {/* CONTENU DU FORMULAIRE */}
         <h1 className="d-flex centered">Connexion</h1>
         <div className="separator"></div>

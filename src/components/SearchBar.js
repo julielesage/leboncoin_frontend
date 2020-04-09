@@ -10,7 +10,7 @@ const SearchBar = ({ setData }) => {
     const response = await Axios.get(
       `https://leboncoin-de-julie.herokuapp.com/offers/with-count?title=${research}`
     );
-    setData(response.data);
+    setData(response.data.offers);
   };
 
   return (

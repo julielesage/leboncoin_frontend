@@ -34,7 +34,6 @@
   height: 0px;
   left: 0;
   top: 453px;
-  margin-bottom: 40px;
   border: 1px solid #e4e8ec;
 }
 
@@ -48,4 +47,9 @@
   font-size: 16px;
   line-height: 19px;
   margin: 30px 0;
+}
+
+.exit {
+  margin-top: -30px;
+  margin-right: -55px;
 }

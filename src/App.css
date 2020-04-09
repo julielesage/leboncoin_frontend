@@ -82,6 +82,23 @@ input {
   margin: 0 auto;
 }
 
+/* MODAL LOGIN *******************/
+
+.modal {
+  display: flex;
+  position: fixed;
+  /* top super important sinon rien ne s'affiche !!*/
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* aux dimensions de l'écran avec viewport */
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* par dessus le fixed header */
+  z-index: 668;
+}
+
 /* FOOTER ************************/
 
 footer {
@@ -135,6 +152,10 @@ footer a:hover {
 
 .blue {
   color: var(--dar-blue);
+}
+
+.red {
+  color: red;
 }
 
 /* BORDERS *****************/
@@ -220,6 +241,11 @@ p {
 .centered {
   display: flex;
   justify-content: center;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .column {

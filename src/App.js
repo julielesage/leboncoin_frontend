@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Offers from "./containers/Offers/Offers";
 import Offer from "./containers/Offer/Offer";
-import LogIn from "./containers/LogIn/LogIn";
 import SignUp from "./containers/SignUp/SignUp";
 import Publish from "./containers/Publish/Publish";
 import Payment from "./containers/Payment/Payment";
@@ -22,8 +21,18 @@ import {
   faPlusSquare,
   faEye,
   faBell,
+  faTimesCircle,
 } from "@fortawesome/free-regular-svg-icons";
-library.add(faSearch, faPlusSquare, faUser, faCartPlus, faClock, faEye, faBell);
+library.add(
+  faSearch,
+  faTimesCircle,
+  faPlusSquare,
+  faUser,
+  faCartPlus,
+  faClock,
+  faEye,
+  faBell
+);
 
 /* get API from Heroku ****************/
 
@@ -31,21 +40,31 @@ function App() {
   // is User connected ?
   const [token, setToken] = useState(Cookies.get("token") || null);
   const [username, setUsername] = useState(Cookies.get("username") || "");
+  const [showModal, setShowModal] = useState(false);
 
   const onLogin = (token, username) => {
     setToken(token);
     setUsername(username);
-    Cookies.set("token", token);
-    Cookies.set("username", username);
+    Cookies.set("token", token, { expires: 100 });
+    Cookies.set("username", username, { expires: 100 });
   };
 
   return (
     <Router>
-      <Header setToken={setToken} token={token} username={username} />
+      <Header
+        setToken={setToken}
+        token={token}
+        username={username}
+        setShowModal={setShowModal}
+      />
       <div className="window">
         <Switch>
           <Route exact path="/">
-            <Offers />
+            <Offers
+              onLogin={onLogin}
+              showModal={showModal}
+              setShowModal={setShowModal}
+            />
           </Route>
           <Route path="/publish">
             <Publish />
@@ -55,9 +74,6 @@ function App() {
           </Route>
           <Route path="/sign_up">
             <SignUp onLogin={onLogin} />
-          </Route>
-          <Route path="/log_in">
-            <LogIn onLogin={onLogin} />
           </Route>
           <Route path="/payment">
             <Payment username={username} />
