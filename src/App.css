@@ -6,7 +6,7 @@
   --dark-orange: #c0562a;
   --blue: #4183d7;
   --dar-blue: #305688;
-  --grey-text-input: #768696;
+  --grey-text-input: #8593a1;
   --grey-background-input: #f4f6f7;
   --background: #f9f9f9;
   min-height: 100%;
@@ -27,6 +27,7 @@ body {
 * {
   box-sizing: border-box;
   text-decoration: none;
+  outline: none;
 }
 
 *:hover {
@@ -62,6 +63,8 @@ button {
 
 input {
   font-size: 16px;
+  outline: none;
+  border: 1px solid var(--grey-text-input);
 }
 
 .cursor {

@@ -1,0 +1,90 @@
+.form {
+  width: 1000px;
+  height: 576px;
+  margin: 98px 220px auto 220px;
+  padding: 30px 55px;
+  background-color: white;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  padding: 10px;
+}
+
+.sub-icon {
+  font-weight: bold;
+  font-size: 30px;
+  color: #4183d7;
+  margin-right: 30px;
+}
+
+.left-info {
+  width: 400px;
+}
+
+.icon-cube {
+  width: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.left-info + p {
+  margin-bottom: 60px;
+}
+
+.right-subscribe {
+  width: 370px;
+  padding: 10px;
+}
+
+.signup-separator {
+  width: 350px;
+  height: 0px;
+  margin: 21px auto 54px auto;
+  border: 3px solid #f56b2a;
+}
+
+.signup-input {
+  width: 360px;
+  height: 44px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(155, 152, 152);
+
+  padding-left: 15px;
+}
+
+.signup-midinput {
+  width: 165px;
+  height: 44px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(155, 152, 152);
+  margin-right: 5px;
+  padding-left: 15px;
+}
+
+.cgu-cgv {
+  font-size: 13px;
+  line-height: 15px;
+  padding-top: 10px;
+}
+
+.signup-check:not(:checked) {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1);
+  box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1);
+  border-radius: 2px;
+  height: 10px;
+  width: 16px;
+  transform: scale(1.3);
+  margin-right: 10px;
+}
+
+.btn-signup {
+  background-color: #4183d7;
+  border-radius: 5px;
+  height: 44px;
+  width: 360px;
+  margin: 20px 0 60px 0;
+}

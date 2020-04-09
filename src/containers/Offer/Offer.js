@@ -12,7 +12,8 @@ const Offer = () => {
 
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [sellerOffers, setSellerOffers] = useState(6);
+  //would be useState if back can give sellers info:
+  const sellerOffers = 6;
 
   /* we need an axios.get again, just in case someone is coming from directurl and not from Offers*/
 
