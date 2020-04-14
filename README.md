@@ -2,9 +2,9 @@
 	Leboncoin Clone - React
 </h1>
 
-<p align="center">
-	<video src="src/components/img/leboncoin-demo_video.mp4" width="1000" height="400" controls preload></video>
-</p>
+
+<img src="https://j.gifs.com/xnwR7l.gif" width="100%" />
+
 
 ## Overview
 
