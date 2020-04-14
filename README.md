@@ -10,13 +10,13 @@
 
 **5 pages are availables :**  
    
-Sign_up,   
-Offers(home),   
-Offer,   
-Publish. 
-Payment.  
+Sign_up   
+Offers(home)   
+Offer   
+Publish   
+Payment  
 
-+ 1 modal for LogIn
+-- plus 1 modal for LogIn
 
 ## Packages
 
@@ -24,6 +24,8 @@ Payment.
 - [React Stripe Elements](https://github.com/stripe/react-stripe-elements)
 - [JS Cookie](https://github.com/js-cookie/js-cookie)
 - [Axios](https://github.com/axios/axios)
+
+## Corresponding Express Backend : https://github.com/julielesage/leboncoin_backend
 
 ## Running the project
 
