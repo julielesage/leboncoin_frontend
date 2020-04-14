@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LogIn = ({ onLogin, setShowModal }) => {
+const LogIn = ({ onLogin, setShowModal, productId }) => {
+  const history = useHistory();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -56,6 +58,7 @@ const LogIn = ({ onLogin, setShowModal }) => {
             onClick={(e) => {
               e.preventDefault();
               setShowModal(false);
+              history.push("/");
             }}
           />
         </div>
@@ -88,7 +91,16 @@ const LogIn = ({ onLogin, setShowModal }) => {
         <strong className="centered-text pad25">
           Vous n'avez pas de compte ?
         </strong>
-        <Link to="/sign_up" className="create-account d-flex centered aligned">
+        <Link
+          to={{
+            pathname: "/sign_up",
+            state: {
+              prevLocation: location.pathname,
+              productId: productId,
+            },
+          }}
+          className="create-account d-flex centered aligned"
+        >
           Créer un compte
         </Link>
       </form>

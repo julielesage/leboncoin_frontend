@@ -3,7 +3,6 @@ import axios from "axios";
 import SearchBar from "../../components/SearchBar";
 import Card from "../../components/Card";
 import Pagination from "../../components/Pagination";
-import LogIn from "../../components/LogIn/LogIn.js";
 import "./style.css";
 
 const Offers = ({ onLogin, setShowModal, showModal }) => {
@@ -71,13 +70,6 @@ const Offers = ({ onLogin, setShowModal, showModal }) => {
           paginate={paginate}
         />
       </div>
-      {showModal === true ? (
-        <div className="modal">
-          <div className="centered aligned">
-            <LogIn onLogin={onLogin} setShowModal={setShowModal} />
-          </div>
-        </div>
-      ) : null}
     </>
   );
 };

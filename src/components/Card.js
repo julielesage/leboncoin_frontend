@@ -21,7 +21,7 @@ const Offer = ({
     <Link to={"/Offer/" + _id}>
       <li className="d-flex" key={_id}>
         <div className="grey-img">
-          <img className="product-img" alt={description} src={pictures[0]} />
+          <img className="product-img" alt={title} src={pictures[0].url} />
         </div>
         <div className="d-flex column space-between">
           <div>

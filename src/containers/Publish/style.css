@@ -1,0 +1,29 @@
+.publish-form {
+  background-color: white;
+  width: 1000px;
+  height: 680px;
+  margin: 104px auto 0 auto;
+  padding: 30px 190px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-publish-title {
+  width: 550px;
+}
+
+.input-publish-details {
+  width: 550px;
+  vertical-align: top;
+}
+
+.input-publish-price {
+  width: 100px;
+  margin: 0 20px 20px 0;
+}
+
+.frame {
+  width: 560;
+  margin: 0 auto;
+}
+
+

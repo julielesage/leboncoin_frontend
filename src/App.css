@@ -61,10 +61,25 @@ button {
   border: none;
 }
 
-input {
+input,
+textarea {
   font-size: 16px;
   outline: none;
-  border: 1px solid var(--grey-text-input);
+  border-radius: 5px;
+  border: 0.5px solid rgb(155, 152, 152);
+  padding: 15px;
+}
+
+input {
+  height: 44px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="file"] {
+  border: none;
 }
 
 .cursor {
@@ -79,7 +94,7 @@ input {
 .wrapper {
   width: 1100px;
   min-height: 100%;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 }
 
 /* MODAL LOGIN *******************/
@@ -89,7 +104,7 @@ input {
   position: fixed;
   /* top super important sinon rien ne s'affiche !!*/
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   /* aux dimensions de l'écran avec viewport */
   width: 100vw;
   height: 100vh;

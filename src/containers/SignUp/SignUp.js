@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Axios from "axios";
 
-const SignUp = ({ onLogin }) => {
+const SignUp = ({ onLogin, setShowModal }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,14 +13,22 @@ const SignUp = ({ onLogin }) => {
   const [errorMessage, setErrorMessage] = useState(null);
   const history = useHistory();
 
+  useEffect(() => {
+    setShowModal(false);
+  });
+
   // METHODE ARTHUR
   // const fieldIsEmpty =
   //   userName === '' || email === '' || password === '' || passwordbis === '';
   // dans le onSubmit : if (fieldIsEmpty) {setErrorMessage("fill all the fields");
 
+  //get previous url, given by Login in the Link
+  const location = useLocation();
+  let { prevLocation, productId } = location.state;
+
   const submit = async () => {
     // regex on username allow to avoid special characters, to count letters, allow from a to z and from 0 to 9, including - and _, for a total between 3 and 15 characters :
-    const result = username.match(/^[a-z0-9_-]{3,15}$/);
+    const result = username.match(/^[a-zA-Z0-9_-]{3,15}$/);
     if (result === null) {
       setErrorMessage(
         "Pseudo non valide, n'utiliser que des lettres et des chiffres, entre 3 et 15 caractères"
@@ -47,12 +55,14 @@ const SignUp = ({ onLogin }) => {
             password: password,
           }
         );
-        console.log("data ==>", response.data);
+
         //register token and username in App.js states and in Cookies
         onLogin(response.data.token, response.data.account.username);
 
-        //back to "offers"
-        // history.push("/");
+        //back to "previous"
+        if (prevLocation === "/payment" || productId !== "")
+          history.push("/offer/" + productId);
+        else history.push(prevLocation);
       } catch (error) {
         alert("an error occured");
         console.log("error.message = ", error.message);

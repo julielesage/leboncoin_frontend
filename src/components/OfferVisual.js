@@ -8,7 +8,7 @@ const OfferVisual = (props) => {
         <img
           alt={props.data.title}
           className="big-picture"
-          src={props.data.pictures[0]}
+          src={props.data.pictures[0].url}
         />
       </div>
       <div className="d-flex column space-between pad25">

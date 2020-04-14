@@ -21,9 +21,10 @@ const Offer = () => {
     const fetchData = async () => {
       const response = await axios.get(
         //here old api url cause no real database
-        "https://leboncoin-api.herokuapp.com/api/offer/" + id
+        "https://leboncoin-de-julie.herokuapp.com/offer/" + id
       );
       setData(response.data);
+
       setIsLoading(false);
     };
     fetchData();

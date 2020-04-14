@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import LogIn from "../LogIn/LogIn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import "./style.css";
 
-const Header = ({ username, token, setToken, setShowModal }) => {
+const Header = ({
+  username,
+  token,
+  setToken,
+  setShowModal,
+  onLogin,
+  showModal,
+  productId,
+}) => {
   const history = useHistory();
   const [searchFocus, setSearchFocus] = useState(false);
 
@@ -86,6 +95,17 @@ const Header = ({ username, token, setToken, setShowModal }) => {
           )}
         </div>
       </header>
+      {showModal === true ? (
+        <div className="modal">
+          <div className="centered aligned">
+            <LogIn
+              onLogin={onLogin}
+              setShowModal={setShowModal}
+              productId={productId}
+            />
+          </div>
+        </div>
+      ) : null}
     </>
   );
 };

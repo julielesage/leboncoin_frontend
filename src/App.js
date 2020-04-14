@@ -41,6 +41,7 @@ function App() {
   const [token, setToken] = useState(Cookies.get("token") || null);
   const [username, setUsername] = useState(Cookies.get("username") || "");
   const [showModal, setShowModal] = useState(false);
+  const [productId, setProductId] = useState("");
 
   const onLogin = (token, username) => {
     setToken(token);
@@ -56,6 +57,9 @@ function App() {
         token={token}
         username={username}
         setShowModal={setShowModal}
+        onLogin={onLogin}
+        showModal={showModal}
+        productId={productId}
       />
       <div className="window">
         <Switch>
@@ -67,16 +71,25 @@ function App() {
             />
           </Route>
           <Route path="/publish">
-            <Publish />
+            <Publish
+              token={token}
+              onLogin={onLogin}
+              setShowModal={setShowModal}
+              showModal={showModal}
+            />
           </Route>
           <Route path="/offer/:id">
             <Offer />
           </Route>
           <Route path="/sign_up">
-            <SignUp onLogin={onLogin} />
+            <SignUp onLogin={onLogin} setShowModal={setShowModal} />
           </Route>
           <Route path="/payment">
-            <Payment username={username} />
+            <Payment
+              setShowModal={setShowModal}
+              showModal={showModal}
+              setProductId={setProductId}
+            />
           </Route>
         </Switch>
       </div>

@@ -45,3 +45,7 @@ aside button {
   height: 44px;
   border-radius: 5px;
 }
+
+aside button:hover {
+  background-color: #c0562a;
+}
