@@ -25,7 +25,9 @@ Payment
 - [JS Cookie](https://github.com/js-cookie/js-cookie)
 - [Axios](https://github.com/axios/axios)
 
-## Corresponding Express Backend : https://github.com/julielesage/leboncoin_backend
+## Corresponding url
+Express Backend : https://github.com/julielesage/leboncoin_backend.  
+web : https://nifty-poitras-6bd5ed.netlify.com/
 
 ## Running the project
 
