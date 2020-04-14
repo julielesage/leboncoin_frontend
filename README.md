@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<video src="src/components/img/leboncoin-demo_video.mp4" width="1000" controls preload></video>
+	<video src="src/components/img/leboncoin-demo_video.mp4" width="1000" height="400" controls preload></video>
 </p>
 
 ## Overview
