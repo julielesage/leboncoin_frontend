@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<img src="src/components/img/leboncoin demo video .mp4" width="100%">
+	<video src="src/components/img/leboncoin demo video .mp4" width="100%">
 </p>
 
 ## Overview
