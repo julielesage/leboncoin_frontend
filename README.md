@@ -3,14 +3,20 @@
 </h1>
 
 <p align="center">
-	<video src="src/components/img/leboncoin demo video .mp4" width="100%">
+	<video src="src/components/img/leboncoin-demo_video.mp4" width="1000" controls preload></video>
 </p>
 
 ## Overview
 
-**Leboncoin Clone made at [Le Reacteur](https://www.lereacteur.io/) Bootcamp.**  
-5 pages are availables : Sign_up, Offers(home), Offer, Publish and Payment.
-1 modal for LogIn
+**5 pages are availables :**  
+   
+Sign_up,   
+Offers(home),   
+Offer,   
+Publish. 
+Payment.  
+
++ 1 modal for LogIn
 
 ## Packages
 
