@@ -17,7 +17,7 @@ Payment
 
 -- plus 1 modal for LogIn
 
-**video 1 : offers navigation + sign up                video 2 : offer payment + deconnect/log in + upload new offer**
+**video 1 : offers navigation + sign up          /////         video 2 : offer payment + deconnect/log in + upload new offer**
 <img src="https://j.gifs.com/710WBy.gif" width="50%" /><img src="https://j.gifs.com/D1oJOq.gif" width="50%" />
 
 ## Packages
